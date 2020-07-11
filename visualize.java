@@ -17,9 +17,27 @@ import javax.swing.SwingUtilities;
 public class visualize extends JPanel {
     List<Double> scores =  new ArrayList();
     int padding=20;
-    int lablepadding=12;
+    int labelpadding=12;
     int numberYDivisions=6;
+    int  pointWidth = 10 ;  
 
+    private Color gridColor=new Color(200,200,200,200);
+
+    private double getMinScores() { 
+        double minScore = Double.MAX_VALUE;
+        for (Double score : scores) {
+            minScore = Math.min(minScore, score);
+        } 
+        return minScore;
+        }
+
+        private double getMaxScore() {
+        double maxScore = Double.MIN_VALUE;
+        for (Double score : scores) {
+            maxScore = Math.max(maxScore, score);
+        }
+        return maxScore;
+    }
 
     public visualize(List<Double> scores){
         this.scores=scores;
@@ -62,14 +80,22 @@ public class visualize extends JPanel {
             graphPoints.add(new Point(x1,y1));
         }
 
-        g2.setColor(COLOR.WHITE);
+        g2.setColor(Color.WHITE);
         g2.fillRect(padding+labelpadding,padding,getWidth()-(2*padding)-labelpadding,getHeight()-2*padding-labelpadding);
         g2.setColor(Color.BLUE);
 
         for(int i=0;i<numberYDivisions+1;i++){
             int x0=padding+labelpadding;
-                int x1=pointWidth+labelpadding+padding;
-                int y0=getHeight()-((i*(getHeight()-padding*2-labelpadding))/numberYDivison+padding+labelpadding)
+            int x1=pointWidth+labelpadding+padding;
+            int y0=getHeight()-((i*(getHeight()-padding*2-labelpadding))/numberYDivisions+padding+labelpadding);
+            
+            int y1=y0;
+            if(scores.size()>0){
+                g2.setColor(gridColor);
+                g2.drawLine(padding+labelpadding+1+pointWidth,y0,getWidth()-padding,y1);
+                g2.setColor(Color.BLACK);
+                String yLabel=((int)((getMinScores()+(getMaxScore()-getMinScores())*((i*8.0)/numberYDivisions))*100))/100.0+"";
+            }
         }
 
     } 
