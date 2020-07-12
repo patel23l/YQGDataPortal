@@ -7,9 +7,11 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Stroke;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -44,6 +46,28 @@ public class visualize extends JPanel {
     }
 
     public static void createGui(){
+        //===========================================
+        List<String> ward = new ArrayList<>();
+        List<String> names = new ArrayList<>();
+        List<String> votes = new ArrayList<>();
+        //===========================================
+        try {
+            File myObj = new File("input.txt");
+            Scanner Reader = new Scanner(myObj);
+
+            while (Reader.hasNextLine()) {
+                String data = Reader.nextLine();
+                String[] separation = data.split(",");
+                ward.add(separation[0]);
+                names.add(separation[1]);
+                votes.add(separation[2]);
+            }
+            Reader.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        //===========================================
         Random random = new Random();
     List<Double> scores =  new ArrayList();
 
@@ -95,9 +119,14 @@ public class visualize extends JPanel {
                 g2.drawLine(padding+labelpadding+1+pointWidth,y0,getWidth()-padding,y1);
                 g2.setColor(Color.BLACK);
                 String yLabel=((int)((getMinScores()+(getMaxScore()-getMinScores())*((i*8.0)/numberYDivisions))*100))/100.0+"";
+                
+                //adding values to the y-axis
+                FontMetrics metric = g2.getFontMetrics();
+                int labelWidth = metric.stringWidth(yLabel);
+                g2.drawString(yLabel, x0 - labelWidth - 6, y0 + (metric.getHeight() / 2) - 3);
+                g2.drawLine(x0, y0, x1, y1);
             }
         }
-
     } 
     public static void main(String args[]){
         SwingUtilities.invokeLater(new Runnable(){
