@@ -7,9 +7,11 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Stroke;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -44,6 +46,28 @@ public class visualize extends JPanel {
     }
 
     public static void createGui(){
+        //===========================================
+        List<String> ward = new ArrayList<>();
+        List<String> names = new ArrayList<>();
+        List<String> votes = new ArrayList<>();
+        //===========================================
+        try {
+            File myObj = new File("input.txt");
+            Scanner Reader = new Scanner(myObj);
+
+            while (Reader.hasNextLine()) {
+                String data = Reader.nextLine();
+                String[] separation = data.split(",");
+                ward.add(separation[0]);
+                names.add(separation[1]);
+                votes.add(separation[2]);
+            }
+            Reader.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+        //===========================================
         Random random = new Random();
     List<Double> scores =  new ArrayList();
 
