@@ -119,9 +119,14 @@ public class visualize extends JPanel {
                 g2.drawLine(padding+labelpadding+1+pointWidth,y0,getWidth()-padding,y1);
                 g2.setColor(Color.BLACK);
                 String yLabel=((int)((getMinScores()+(getMaxScore()-getMinScores())*((i*8.0)/numberYDivisions))*100))/100.0+"";
+                
+                //adding values to the y-axis
+                FontMetrics metric = g2.getFontMetrics();
+                int labelWidth = metric.stringWidth(yLabel);
+                g2.drawString(yLabel, x0 - labelWidth - 6, y0 + (metric.getHeight() / 2) - 3);
+                g2.drawLine(x0, y0, x1, y1);
             }
         }
-
     } 
     public static void main(String args[]){
         SwingUtilities.invokeLater(new Runnable(){
