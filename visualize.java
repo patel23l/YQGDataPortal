@@ -24,7 +24,7 @@ public class visualize extends JPanel {
     
     int padding=20;
     int labelpadding=12;
-    int numberYDivisions=6;
+    int numberYDivisions=8;
     int  pointWidth = 10 ;  
 
     private Color gridColor = new Color(200,200,200,200);
@@ -132,6 +132,28 @@ public class visualize extends JPanel {
                 FontMetrics metric = g2.getFontMetrics();
                 int labelWidth = metric.stringWidth(yLabel);
                 g2.drawString(yLabel, x0 - labelWidth - 6, y0 + (metric.getHeight() / 2) - 3);
+            }
+            g2.drawLine(x0, y0, x1, y1);
+        }
+
+        //adding vals to the x-axis
+        for (int i = 0; i < votes.size(); i++) {
+            if(votes.size() > 1) {
+                int x0 = i * (getHeight() - padding * 2 - labelpadding) / (votes.size() - 1) + padding + labelpadding;
+                int x1 = x0;
+                int y0 = getHeight() - padding - labelpadding;
+                int y1 = y0 - pointWidth;
+
+                if ((i % ((int) ((votes.size() / 8.0)) + 3)) == 0) {
+                    g2.setColor(gridColor);
+                    g2.drawLine(x0, getHeight() - padding - labelpadding - 1 - pointWidth, x1, padding);
+                    g2.setColor(Color.BLACK);
+                    String xLabel = i + "";
+
+                    FontMetrics metrics = g2.getFontMetrics();
+                    int labelWidth = metrics.stringWidth(xLabel);
+                    g2.drawString(xLabel, x0 - labelWidth / 2, y0 + metrics.getHeight() + 3);
+                }
                 g2.drawLine(x0, y0, x1, y1);
             }
         }
