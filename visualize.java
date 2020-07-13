@@ -136,6 +136,7 @@ public class visualize extends JPanel {
             g2.drawLine(x0, y0, x1, y1);
         }
 
+        //adding vals to the x-axis
         for (int i = 0; i < votes.size(); i++) {
             if(votes.size() > 1) {
                 int x0 = i * (getHeight() - padding * 2 - labelpadding) / (votes.size() - 1) + padding + labelpadding;
