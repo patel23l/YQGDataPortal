@@ -14,3 +14,5 @@ Documentation Repository
 ## Diagrams
 ### Class Diagram
 ![](Diagrams/Class%20Diagram.png)
+### Design Model
+![] (Diagrams/Class%20Diagram.png)
