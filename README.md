@@ -18,3 +18,5 @@ Documentation Repository
 ![](Diagrams/Design%20Model.png)
 ### Use Case Diagram
 ![](Diagrams/Use%20Case%20Diagram.png)
+### Data Model
+### Sequence Diagram
