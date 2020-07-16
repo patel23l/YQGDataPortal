@@ -16,3 +16,5 @@ Documentation Repository
 ![](Diagrams/Class%20Diagram.png)
 ### Design Model
 ![](Diagrams/Design%20Model.png)
+### Use Case Diagram
+![](Diagrams/Use%20Case%20Diagram.png)
