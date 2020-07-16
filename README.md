@@ -9,4 +9,4 @@ Version Control |
 Bug Reporting |
 Project Management | 
 Testing Strategy |
-Documentation Repository |
+Documentation Repository 
