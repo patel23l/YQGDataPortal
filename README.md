@@ -10,3 +10,7 @@ Bug Reporting |
 Project Management | 
 Testing Strategy |
 Documentation Repository 
+
+## Diagrams
+### Class Diagram
+![](Diagrams/Class%20Diagram.png)
