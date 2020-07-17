@@ -1,3 +1,10 @@
+
+/**
+ * Write a description of class visualize here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,6 +28,7 @@ public class visualize extends JPanel {
    static List<Double> votes = new ArrayList<>();
     List<Double> votesOnY = new ArrayList<>();
     int countDigit = 0;
+    String fname = "";
 
    static List<Double> ward = new ArrayList<>();
     static List<String> names = new ArrayList<>();
@@ -58,13 +66,21 @@ public class visualize extends JPanel {
         setPreferredSize(new Dimension(700, 600));
     }
 
+    public String getName() {
+        return this.fname;
+    }
+
+    public void setName(String filename) {
+        this.fname = filename;
+    }
+
     public void scanFile(String fileName) {
         double temp;
 
         try {
 
-
-            File myObj = new File(fileName);
+            setName(fileName);
+            File myObj = new File(getName());
             Scanner Reader = new Scanner(myObj);
 
             while (Reader.hasNextLine()) {
