@@ -9,7 +9,7 @@ Version Control |
 [Bug Reporting](https://github.com/hetpatel14/YQGDataPortal/issues) |
 [Project Management](https://github.com/hetpatel14/YQGDataPortal/projects/3) | 
 [Testing Strategy](https://github.com/hetpatel14/YQGDataPortal/tree/master/JUnitTestFiles) |
-[Documentation Repository](https://github.com/hetpatel14/YQGDataPortal.wiki.git)
+[Documentation Repository](https://github.com/hetpatel14/YQGDataPortal/wiki/Documentation-Repository)
 
 ## Diagrams
 ### Class Diagram
