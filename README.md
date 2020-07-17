@@ -2,3 +2,21 @@
 Citizens can use City of Windsor’s open data for research purposes or improve their interaction with municipal services and facilities.
 
 Datasets are retrieved from: https://opendata.citywindsor.ca/
+
+## Team Collaboration Tools
+[Code Repository](https://github.com/hetpatel14/YQGDataPortal.git) |
+Version Control |
+[Bug Reporting](https://github.com/hetpatel14/YQGDataPortal/issues) |
+[Project Management](https://github.com/hetpatel14/YQGDataPortal/projects/3) | 
+Testing Strategy |
+[Documentation Repository](https://github.com/hetpatel14/YQGDataPortal.wiki.git)
+
+## Diagrams
+### Class Diagram
+![](Diagrams/Class%20Diagram.png)
+### Design Model
+![](Diagrams/Design%20Model.png)
+### Use Case Diagram
+![](Diagrams/Use%20Case%20Diagram.png)
+### Data Model
+### Sequence Diagram
