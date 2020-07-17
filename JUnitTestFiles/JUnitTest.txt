@@ -1,0 +1,16 @@
+input.txt
+java.io.FileNotFoundException: input.txt (The system cannot find the file specified)
+"input.txt"
+java.io.FileNotFoundException: "input.txt" (The filename, directory name, or volume label syntax is incorrect)
+"input.txt"
+java.io.FileNotFoundException: "input.txt" (The filename, directory name, or volume label syntax is incorrect)
+input.txt
+Mayor name:  Drew DILKENS Ward number: 1.0 Votes: 312.0
+Mayor name:  Ernie LAMONT Ward number: 1.0 Votes: 9.0
+Mayor name:  Franz DYCK Ward number: 1.0 Votes: 10.0
+Mayor name:  Drew DILKENS Ward number: 2.0 Votes: 226.0
+Mayor name:  Ernie LAMONT Ward number: 2.0 Votes: 0.0
+Mayor name:  Franz DYCK Ward number: 2.0 Votes: 3.0
+Mayor name:  Drew DILKENS Ward number: 3.0 Votes: 152.0
+Mayor name:  Ernie LAMONT Ward number: 3.0 Votes: 7.0
+Mayor name:  Franz DYCK Ward number: 3.0 Votes: 6.0

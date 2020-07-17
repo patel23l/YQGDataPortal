@@ -1,3 +1,10 @@
+
+/**
+ * Write a description of class visualize here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,6 +28,7 @@ public class visualize extends JPanel {
    static List<Double> votes = new ArrayList<>();
     List<Double> votesOnY = new ArrayList<>();
     int countDigit = 0;
+    String fname = "";
 
    static List<Double> ward = new ArrayList<>();
     static List<String> names = new ArrayList<>();
@@ -34,10 +42,9 @@ public class visualize extends JPanel {
     private Color lineColor = new Color(255, 255, 254);
     private Color pointColor = new Color(255, 0, 255);
     private static final Stroke GRAPH_STROKE = new BasicStroke(2f);
-    // private static int pointWidth = 10;
     // get the min votes
+    double minVote = Double.MAX_VALUE;
     private double getMinVotes() {
-        double minVote = Double.MAX_VALUE;
 
         for (double vote : votes) {
             minVote = Math.min(minVote, vote);
@@ -55,19 +62,25 @@ public class visualize extends JPanel {
         return maxVote;
     }
 
-    public visualize(List<Double> votes) {
-        this.votes = votes; // initializes the votes from input to votes attribute
+    public visualize() {
+        setPreferredSize(new Dimension(700, 600));
     }
 
-    public static void createGui() {
-        Random random = new Random();
-        // retrieve data from the input (data) file
-        // ==========================================
+    public String getName() {
+        return this.fname;
+    }
 
+    public void setName(String filename) {
+        this.fname = filename;
+    }
+
+    public void scanFile(String fileName) {
         double temp;
 
         try {
-            File myObj = new File("input.txt");
+
+            setName(fileName);
+            File myObj = new File(getName());
             Scanner Reader = new Scanner(myObj);
 
             while (Reader.hasNextLine()) {
@@ -79,25 +92,15 @@ public class visualize extends JPanel {
                 temp = Double.parseDouble(separation[2]);
                 votes.add(temp);
             }
+            for (int k = 0; k < votes.size(); k++) {
+                System.out.println(
+                        "Mayor name: " + names.get(k) + " Ward number: " + ward.get(k) + " Votes: " + votes.get(k));
+            }
             Reader.close();
         } catch (Exception e) {
             System.out.println(e);
         }
-        // ==========================================
-        int maxDataPoints = 20;
-        int maxScore = 8;
-
-        visualize mainPanel = new visualize(votes);
-        mainPanel.setPreferredSize(new Dimension(700, 600));
-
-        // Set up GUI components
-        JFrame frame = new JFrame("Election Dataset");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(mainPanel);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        // frame.setResizable(false);
+        
     }
     public void copyList(){
         votesOnY.addAll(votes);
@@ -122,14 +125,13 @@ public class visualize extends JPanel {
             graphPoints.add(new Point(x1, y1));
         }
 
-        System.out.println(graphPoints.size()+""+votes.size());
-
         g2.setColor(Color.WHITE);
         g2.fillRect(padding + labelpadding, padding, getWidth() - (2 * padding) - labelpadding,
                 getHeight() - 2 * padding - labelpadding);
         g2.setColor(Color.BLUE);
-        // distributePoints();
+
         copyList();
+
         // adding value to y-axis
         for (int i = 0; i < numberYDivisions + 1; i++) {
             int x0 = padding + labelpadding;
@@ -197,13 +199,5 @@ public class visualize extends JPanel {
             int ovalH = pointWidth;
             g2.fillOval(x, y, ovalW, ovalH);
         }
-    }
-
-    public static void main(String args[]) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createGui();
-            }
-        });
     }
 }

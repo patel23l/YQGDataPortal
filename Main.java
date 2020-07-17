@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import java.util.*;
 // import javax.swing.JPanel;
 // import javax.swing.SwingUtilities;
 public class Main{
@@ -10,7 +11,10 @@ public class Main{
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        visual.scanFile();
+        Scanner sc = new Scanner(System.in);
+        String fileName=sc.nextLine();
+        visual.scanFile(fileName);
         visual.repaint();
+        sc.close();
     }       
 }
