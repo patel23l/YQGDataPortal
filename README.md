@@ -18,6 +18,5 @@ Testing Strategy |
 ![](Diagrams/Design%20Model.png)
 ### Use Case Diagram
 ![](Diagrams/Use%20Case%20Diagram.png)
-### Data Model
 ### Sequence Diagram
 ![](Diagrams/Sequence%20Diagram.png)
