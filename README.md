@@ -9,13 +9,3 @@ Datasets are retrieved from: https://opendata.citywindsor.ca/
 [Project Management](https://github.com/hetpatel14/YQGDataPortal/projects/3) | 
 [Testing Strategy](https://github.com/hetpatel14/YQGDataPortal/tree/master/JUnitTestFiles) |
 [Documentation Repository](https://github.com/hetpatel14/YQGDataPortal/wiki/Documentation-Repository)
-
-## Diagrams
-### Class Diagram
-![](Diagrams/Class%20Diagram.png)
-### Design Model
-![](Diagrams/Design%20Model.png)
-### Use Case Diagram
-![](Diagrams/Use%20Case%20Diagram.png)
-### Sequence Diagram
-![](Diagrams/Sequence%20Diagram.png)
