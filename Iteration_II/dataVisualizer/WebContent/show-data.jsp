@@ -8,10 +8,19 @@
 <title>Data Visualizer</title>
 </head>
 <body>
-	<c:forEach var="items" items = "${values}">
-		${items.ward}
-		${items.name}
-		${items.votes}
-	</c:forEach>
+	<table border="1">
+		<tr>
+			<th>Ward</th>
+			<th>Name</th>
+			<th>Votes</th>
+		</tr>
+		<c:forEach var="items" items = "${values}">
+			<tr>
+				<td> ${items.ward} </td>
+				<td> ${items.name} </td>
+				<td> ${items.votes} </td>
+			</tr>
+		</c:forEach>
+	</table>
 </body>
 </html>
