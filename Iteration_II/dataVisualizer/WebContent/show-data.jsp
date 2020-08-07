@@ -8,17 +8,12 @@
 <title>Data Visualizer</title>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<th>Ward</th>
-			<th>Name</th>
-			<th>Votes</th>
-		</tr>
+	<h1 align="center">Election</h1>
+	<table border="1" cellpadding="5%" align="center">
 		<c:forEach var="items" items = "${values}">
 			<tr>
-				<td> ${items.ward} </td>
-				<td> ${items.name} </td>
-				<td> ${items.votes} </td>
+				<!-- if there is time, separate each field into row -->
+				<td> ${items.entry} </td>
 			</tr>
 		</c:forEach>
 	</table>

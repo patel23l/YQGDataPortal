@@ -3,7 +3,6 @@ package com.webapp.dataVisualizer;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +17,7 @@ public class visualize extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//get data from the database
 		List<Dataset> values;
+		
 		try {
 			values = visualizeDbUtil.getDataList();
 			request.setAttribute("values", values);
