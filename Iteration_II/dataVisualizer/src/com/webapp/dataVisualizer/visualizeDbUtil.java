@@ -17,8 +17,8 @@ public class visualizeDbUtil {
 		Connection myConn;
 		try {
 			String url = "jdbc:mysql://localhost:3306/datasets";
-			String user = "root";
-			String pass = "JatiRehje@2020";
+			String user = "";
+			String pass = "";
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			
