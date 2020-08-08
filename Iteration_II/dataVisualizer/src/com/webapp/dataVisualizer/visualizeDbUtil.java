@@ -13,11 +13,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class visualizeDbUtil {
-	public static List<Dataset  > getDataList() throws ClassNotFoundException, SQLException {
+	public static List<Dataset> getDataList(String name) throws ClassNotFoundException, SQLException {
+
+		String db = "datasets";
+		String table = name;
 				
 		ArrayList<Dataset> data = new ArrayList<>();
 		ArrayList<String> fields = new ArrayList<>();
-		String db = "datasets", table = "election";
 		
 		try {
 			String url = "jdbc:mysql://localhost:3306/" + db;
@@ -25,7 +27,6 @@ public class visualizeDbUtil {
 			String pass = "";
 			
 			//take a csv file and automatically add that to the database!
-			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			Connection con = DriverManager.getConnection(url, user, pass);
