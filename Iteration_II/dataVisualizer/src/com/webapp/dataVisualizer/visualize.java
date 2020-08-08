@@ -14,12 +14,18 @@ import javax.servlet.http.HttpServletResponse;
 //visualize is the controller (servlet) 
 public class visualize extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	String db_name; 
+	boolean state = false;
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		db_name = request.getParameter("name");
+		state = true;
 		//get data from the database
 		List<Dataset> values;
 		
 		try {
-			values = visualizeDbUtil.getDataList();
+			System.out.println(db_name);
+			values = visualizeDbUtil.getDataList(db_name);
 			request.setAttribute("values", values);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -28,7 +34,6 @@ public class visualize extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		//redirect to a different page (view - JSP)
 		RequestDispatcher dispatcher = request.getRequestDispatcher("show-data.jsp");
 		dispatcher.forward(request, response);
