@@ -9,17 +9,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.lang.Object;
+
 
 @WebServlet("/visualize")
 //visualize is the controller (servlet) 
 public class visualize extends HttpServlet {
-
 	String db_name; 
-	boolean state = false;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		db_name = request.getParameter("name");
-		state = true;
+		db_name = (String)request.getParameter("dataset");
+		System.out.println(db_name);
 		//get data from the database
 		List<Dataset> values;
 		
