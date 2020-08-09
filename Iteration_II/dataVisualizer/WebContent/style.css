@@ -1,0 +1,38 @@
+.parent {
+  width: 100%; 
+  height: 100%;
+}
+
+.child{
+  background-image:url('bridge.jpg');
+  height: 100%; width: 100%; object-fit: contain;
+}
+
+.col-lg-12{
+  color:white;
+  text-align:center;
+  padding:50px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.para{
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top:40px;
+  /* margin-top:0%; */
+  padding-bottom:40px;
+  background-size:fixed;
+  /* background-color: antiquewhite; */
+  text-align:center;
+  color: white;
+}
+
+.services-cap{
+  font-size: 20px;
+  padding-top:100px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.services-cap p{
+  padding-top: 20px;
+  background-color:burlywood;
+}
