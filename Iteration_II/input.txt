@@ -6,4 +6,4 @@
 2, Franz DYCK, 3
 3, Drew DILKENS, 152
 3, Ernie LAMONT, 7
-3, Franz DYCK, 6
+3, Franz DYCK, 10

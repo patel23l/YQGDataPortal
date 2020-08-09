@@ -26,13 +26,63 @@
   color: white;
 }
 
-.services-cap{
-  font-size: 20px;
-  padding-top:100px;
-  padding-left: 40px;
-  padding-right: 40px;
+.boxes{
+  padding-top: 100px;
+  padding-left:60px;
+  padding-right:20px;
 }
-.services-cap p{
-  padding-top: 20px;
-  background-color:burlywood;
+
+.datasets{
+  border:1px solid black;
+}
+
+.datasets p{
+  padding: 5px;
+  text-align: center;
+}
+
+.services-cap h3{
+  padding-top:20px;
+  text-align: center;
+}
+
+.firsthead h1{
+  padding-top: 40px;
+  padding-left: 100px;
+  text-align: center;
+}          
+
+.panel{
+  padding:20px 20px 50px 20px;
+  border: 1px;
+  border-style:groove;
+}
+
+.description .deschead{
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 30px;
+  padding-top:  40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.description p{
+  background-color: cornflowerblue;
+  color: white;
+  padding-left:40px;  
+}
+
+.downloads{
+  padding-top:100px;
+  padding-left:20px;
+}
+
+.download-links{
+  padding-bottom: 50px;
+  border: 1px;
+  border-style: groove;
+  margin-right: 85%;
+  margin-bottom:20px;
+
 }
