@@ -7,7 +7,7 @@ Datasets are retrieved from: https://opendata.citywindsor.ca/
 [Code Repository](https://github.com/hetpatel14/YQGDataPortal.git) |
 [Bug Reporting](https://github.com/hetpatel14/YQGDataPortal/issues) |
 [Project Management](https://github.com/hetpatel14/YQGDataPortal/projects/3) | 
-[Testing Strategy](https://github.com/hetpatel14/YQGDataPortal/tree/master/JUnitTestFiles) |
+[Testing Strategy](https://github.com/patel23l/YQGDataPortal/tree/master/Iteration_I/JUnitTestFiles) |
 [Documentation Repository](https://github.com/hetpatel14/YQGDataPortal/wiki/Documentation-Repository---Iteration-I)
 
 ## Live Demonstration
